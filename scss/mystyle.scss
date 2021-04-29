@@ -1,0 +1,66 @@
+@charset "utf-8";
+
+// Import a Google Font
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,700');
+// Import only what you need from Bulma
+@import "../node_modules/bulma/sass/base/_all.sass";
+@import "../node_modules/bulma/sass/components/_all.sass";
+@import "../node_modules/bulma/sass/elements/_all.sass";
+@import "../node_modules/bulma/sass/form/_all.sass";
+@import "../node_modules/bulma/sass/grid/_all.sass";
+@import "../node_modules/bulma/sass/helpers/_all.sass";
+@import "../node_modules/bulma/sass/layout/_all.sass";
+@import "../node_modules/bulma/sass/utilities/_all.sass";
+
+$pink: #feecf0;
+$danger:#f14668;
+$warning: #ffdd57;
+$success: #48c774;
+$info: #3298dc;
+
+.has-navbar-fixed-top
+{
+  background-color: $pink;
+  }
+nav {
+  a,p {
+	text-indent: 1rem;
+	}
+  .intro {
+	&:hover {
+	  color: $danger;
+	  }
+	}
+  .article {
+	&:hover {
+	  color: $warning;
+	  }
+	}
+  .interview {
+	&:hover {
+	  color: $success;
+	  }
+	}
+  .reflection {
+	&:hover {
+	  color: $info;
+	  }
+	}
+  }
+main {
+  h2 {
+	font-size: 3rem;
+	text-align: center;
+	}
+  h3 {
+	font-size: 2rem;
+	}
+  p {
+	font-size: 1.5rem;
+	}
+  .indent {
+	p{
+	  text-indent: 7rem;
+	  }
+	}
+  }

@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+	      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title class="fas fa-home">Residential Real Estate</title>
+	<link rel="stylesheet" href="scss/mystyle.css">
+	<script src="https://kit.fontawesome.com/2d69b309d1.js"></script>
+	<script src="myscript.js"></script>
+	<script>
+		document.addEventListener('DOMContentLoaded', () => {
+
+			// Get all "navbar-burger" elements
+			const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+			// Check if there are any navbar burgers
+			if ($navbarBurgers.length > 0) {
+
+				// Add a click event on each of them
+				$navbarBurgers.forEach(el => {
+					el.addEventListener('click', () => {
+
+						// Get the target from the "data-target" attribute
+						const target = el.dataset.target;
+						const $target = document.getElementById(target);
+
+						// Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+						el.classList.toggle('is-active');
+						$target.classList.toggle('is-active');
+
+					});
+				});
+			}
+
+		});
+	</script>
+</head>
+<body class="has-navbar-fixed-top">
+<header>
+	<iframe src="audio.mp3" allow="autoplay" style="display:none" id="iframeAudio">
+	</iframe>
+	<audio autoplay loop id="playAudio">
+		<source src="audio.mp3">
+	</audio>
+	<nav class="navbar container is-transparent is-fixed-top">
+		<div class="navbar-brand">
+			<div class="navbar-burger" data-target="navbarExampleTransparentExample">
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+		</div>
+
+		<div id="navbarExampleTransparentExample" class="navbar-menu">
+			<div class="navbar-start">
+				<a class="navbar-item intro" href=#intro>
+						<span class="icon-text">
+							<span class="icon has-text-danger">
+								<i class="fas fa-play"></i>
+							</span>
+							<span> Intro</span>
+						</span>
+				</a>
+				<a class="navbar-item article" href=#article>
+						<span class="icon-text">
+							<span class="icon has-text-warning">
+								<i class="fas fa-scroll"></i>
+							</span>
+							<span> Article</span>
+						</span>
+				</a>
+				<a class="navbar-item interview" href=#interview>
+						<span class="icon-text">
+							<span class="icon has-text-success">
+								<i class="fas fa-user-friends"></i>
+							</span>
+							<span> Interview</span>
+						</span>
+				</a>
+				<a class="navbar-item reflection" href=#reflection>
+						<span class="icon-text">
+							<span class="icon has-text-info	">
+								<i class="fas fa-cloud"></i>
+							</span>
+							<span> Reflection</span>
+						</span>
+				</a>
+			</div>
+
+			<div class="navbar-end">
+				<div class="navbar-item">
+					<div class="field is-grouped">
+						<p>
+							<a class="bd-tw-button button" href="https://github.com/narissarah/real-estate">
+              <span class="icon">
+                <i class="fab fa-lg fa-github-alt"></i>
+              </span>
+								<span>Github</span>
+							</a>
+						</p>
+						<p class="control">
+							<a class="button is-primary"
+							   href="https://github.com/narissarah/real-estate/archive/refs/heads/main.zip">
+              <span class="icon">
+                <i class="fas fa-download"></i>
+              </span>
+								<span>Download</span>
+							</a>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</nav>
+</header>
+<main>
+	<section class="section is-medium has-background-danger-light" id="intro">
+		<div class="container">
+			<h2><i class="fas fa-play has-text-danger"></i>
+				Intro</h2>
+			<hr>
+			<img src="img/intro.png">
+			<div class="has-text-centered">
+				<br>
+				<button class="button is-danger is-large" onclick="typeWriter()">Click me</button>
+				<br>
+				<p id="app"></p>
+				<script>
+					var i = 0;
+					var txt = 'Welcome to my project for Web Production Class!'; /* The text */
+					var speed = 50;
+
+					function typeWriter() {
+						if (i < txt.length) {
+							document.getElementById("app").innerHTML += txt.charAt(i);
+							i++;
+							setTimeout(typeWriter, speed);
+						}
+					}
+				</script>
+			</div>
+			<br>
+			<div>
+				<p>This website provides information on what things to take into consideration when it comes to
+					<span class="icon has-text-danger"><i class="fas fa-hand-holding-usd"></i></span>
+					investing in a residential property.<span class="icon has-text-danger"><i
+							class="fas fa-home"></i></span> In addition, it contains an excerpt
+					of an interview done by
+					someone who excelled in this field. Read through this website, and I hope you find it helpful!
+					<span class="icon has-text-danger"><i class="fas fa-smile"></i></span>
+				</p>
+			</div>
+	</section>
+	<section class="section is-medium has-background-warning-light indent" id="article">
+		<div class="container">
+			<h2><i class="fas fa-scroll has-text-warning"></i>
+				Article</h2>
+			<hr>
+			<img src="img/article.png">
+			<br>
+			<p>Residential real estate refers to properties used for residential purposes. When it
+				comes to
+				residential real
+				estate, there are two things to keep in mind: The location of the property and its expenses. This
+				article will go
+				into detail about various things to look for in a profitable residential property.
+			</p>
+			<br>
+			<p>The location in which the property resides will determine the type of tenants and the vacant rate. If
+				you buy
+				properties near a university, students may struggle to pay rent, and there would be vacancies during the
+				summer.
+				However, properties near a post-secondary institution and growing employment opportunities attract
+				tenants.
+				Crimes deter tenets. As such, it's good to research crime statistics, the rate of vandalism, and the
+				frequency
+				of police presence. Beyond that, look for properties with a lot of construction as it shows potential
+				for future
+				development.
+			</p>
+			<br>
+			<p>How much money could you potentially make or lose from your investment? First, let's take in account of
+				insurance. Were natural disasters to arise, the insurance coverage will eat away at your rental income.
+				As such,
+				look for places with a low risk of fires, earthquakes or floods. Next, check whether property tax
+				increases are
+				probable in the future. This is a great indicator that financial distress is at play, and you will
+				potentially
+				lose money to vacancies.
+			</p>
+			<br>
+			<p>In conclusion, look for properties that will support amenities, employment opportunities, and
+				education. Ensure
+				that any property income can cover the mortgage payment, taxes, and other expenses in the near future.
+				Most
+				importantly, know that even if you make money now; you can lose money at any time. Like any investment,
+				there's
+				no grantee. </p>
+		</div>
+	</section>
+	<section class="section is-medium has-background-success-light" id="interview">
+		<div class="container">
+			<h2><i class="fas fa-user-friends has-text-success"></i>
+				Interview</h2>
+			<hr>
+			<img src="img/interview.png">
+			<h3>What were your financial expectations?</h3>
+			<p>I don’t have any. I would just rather do that than pension. I have some money in the bank from selling my
+				own property. I didn't want the money to have the money sitting in the bank so I decided to buy another
+				house, which I wasn't going to live in. I didn't really have any financial expectations. I just kind of
+				didn't want to spend the money. If I have the money in the bank, I might just spend it on stuff like
+				holidays and cars and things like
+				that so I thought I'd invest in property. So yeah, I thought I'd invest it, rather than, than just
+				having a sign in the bank. So I didn't really have any financial expectations. It was just a case of if
+				I have all this money in the bank, it might disappear. </p>
+			<br>
+			<h3>What are your liabilities?</h3>
+			<p>Liabilities, I obviously have my mortgages. So I have mortgages to pay for my property outright, the bank
+				perhaps and really just a certain percentage of them. So yeah, my main liabilities would be my
+				mortgages, which I have to pay every month. And that's about it really. I have a lot of bills to pay
+				because we pay all the tax bills. But yeah, my main liabilities would be mortgages and the insurances.
+			</p>
+			<br>
+			<h3>What's the hardest part about your job?</h3>
+			<p>What's the hardest? I mean I don't know. For me, the hardest part is probably managing all the properties
+				and making sure there's enough money coming into to cover everything. And keep on top of maintenance as
+				well. And probably the hardest thing was that giving up control and giving it to somebody else to manage
+				the day to day. This is because I don't manage the day to day stuff, somebody else does that for me. So
+				I've given them control over my properties. </p>
+			<br>
+			<h3>Why do you think you became successful in real estate?</h3>
+			<p>I didn't if I'm successful, but like, I'm quite a driven person. So if I want something it normally
+				happens. So yeah, I'm quite driven. I suppose I had a lot of how I had a lot of help from people who
+				knew what they were doing. And yeah I'm just quite a driven person if I want something I go out and get
+				it. I was willing to put the work in. Not many people were willing to sacrifice time at the moment to
+				live a better life later on. I've always been like, succeeding in what I wanted to do.</p>
+			<br>
+			<h3>Do you have any tips/advice?</h3>
+			<p>Just probably like, just shadow somebody. Go find some people who already do what you are doing and
+				just shadow people. Read lots of books. But yeah that's it just like there's loads of like stuff on
+				YouTube and like anything you want to do go on YouTube. There's research, read a few
+				books, but yeah just find some people who already do it and shadow them is what I would say. Yeah,
+				that's a really good advice to give. But yeah, just find some people around. everybody's will want to
+				share their story. Exactly yes, people do like to talk about themselves.
+			</p>
+		</div>
+	</section>
+	<section class="section is-medium has-background-info-light	" id="reflection">
+		<div class="container">
+			<h2><i class="fas fa-cloud has-text-info"></i>
+				Reflection</h2>
+			<hr>
+			<div class="columns">
+				<div class="column">
+					<h3>Reflect on the interview process...</h3>
+					<p>The interview process was long. I spent the majority of time asking questions within questions.
+						It was more of a casual conversation than an interview. While I did not learn anything new, it
+						was fun.
+					</p>
+				</div>
+				<div class="column">
+					<h3>Reflect on the process of converting the interview into written form...</h3>
+					<p>It was torture. I had "10" interview questions, but I decided to use only 5 for the written
+						version. The reason is that those 5 are the only ones that aren't off-topic. </p>
+				</div>
+			</div>
+			<div class="columns">
+				<div class="column">
+					<h3>Reflect on the process of converting the written form into the website...</h3>
+					<p>This part was fun. At first, I didn't have a clear picture of what the website should look like.
+						As a result, I have some conflicts with my code. I really wanted to implement a dark and light
+						mode option, but that would require me to overwrite my existing code.
+					</p>
+				</div>
+				<div class="column">
+					<h3>Reflect in general on the project...</h3>
+					<p>I wished I could have gone with a different topic. Real estate is a boring topic to talk about. I
+						could interview my cousin on domestic abuse. LGBTQ+ would work well with my colour scheme.
+						Philosophy and psychology are topics I'm passionate about. Anything would be better than the
+						topic that I chose.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+</main>
+<footer class="footer">
+	<div class="content has-text-centered">
+		<img src="img/rainbow.png" width="200" height="200">
+		<p>
+			Made with
+			<span class="icon has-text-danger">
+				<i class="fas fa-heart"></i>
+				</span>
+			by <a href="http://narissaara.me/">Narissara Namkhan</a>
+			<br>
+			On April 2020
+			<span class="icon has-text-warning">
+			<i class="fas fa-clock"></i>
+			</span>
+			<br>
+			502-203-TV Web Production
+
+		</p>
+	</div>
+</footer>
+</body>
+</html>
