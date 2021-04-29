@@ -10233,7 +10233,7 @@ main .indent p {
 }
 main img {
   display: block;
-  max-width: 50%;
+  max-width: 60%;
   height: auto;
   text-align: center;
   margin-left: auto;
